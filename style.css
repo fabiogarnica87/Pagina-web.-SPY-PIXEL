@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+        url("Recursos/fondo arte.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #e6e6e6;
+    scroll-behavior: smooth;
+}
+
+/* ===== HEADER ===== */
+.header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+    /* Botón Juega Ahora dentro del header */
+.header .btn-primary {
+    margin-left: 0px;      /* Lo acerca al menú */
+    padding: 6px 14px;     /* Más pequeño y alineado */
+    font-size: 18px;       /* Texto más compacto */
+}
+
+
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ff2d2d;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 12px;
+}
+
+.nav a:hover {
+    color: #ff2d2d;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+/* ===== HERO ===== */
+.hero {
+    width: 100%;
+    min-height: 55vh;
+    padding-top: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 18px;
+    text-shadow: 0 0 10px #000;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* ===== BOTONES ===== */
+.btn-primary {
+    background: #ff2d2d;
+    padding: 10px 22px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;   
+}
+
+
+
+.btn-primary:hover {
+    background: #c91f1f;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    width: 100%;
+    padding: 110px 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ===== SECCIONES CON FONDO BORROSO ===== */
+.section {
+    width: 100%;
+    padding: 110px 40px 60px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Caja con efecto cristal */
+.section .glass-box {
+    width: 100%;
+    max-width: 900px;
+    padding: 35px;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.35);          /* Fondo oscuro translúcido */
+    backdrop-filter: blur(10px);              /* BLUR DEL FONDO */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Borde sutil */
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+}
+
+
+.section h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 36px;      /* mismo tamaño que antes */
+    font-weight: 400;     /* Bebas no necesita grosor extra */
+    letter-spacing: 2px;  /* hace que se vea más elegante */
+    color: #cfcfcf;        /* gris claro que combina con tu página */
+    text-transform: uppercase; /* opcional pero recomendado */
+    margin-bottom: 25px;
+}
+
+
+
+
+
+/* Texto interior de secciones */
+.section p {
+    max-width: 900px;
+    line-height: 1.35;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+/* Centrado específico para Sinopsis */
+#sinopsis {
+    text-align: center;
+}
+
+/* ===== GALERÍA ===== */
+.grid-galeria {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.img-box {
+    background: #1a1a1a;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ← Hace que la imagen se ajuste */
+}
+
+/* ===== TÍTULO ESTILO TERROR ===== */
+.titulo-terror {
+    font-family: "Creepster", cursive;
+    font-size: 80px;
+    color: #ff1a1a;
+    letter-spacing: 4px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px !important;
+    text-shadow:
+        0 0 12px #ff1a1a,
+        0 0 25px #b30000,
+        0 0 45px #660000;
+}
+
+.titulo-terror::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #8b0000;
+    transform: translateY(12px) scaleY(1.6);
+    opacity: 0.75;
+    filter: blur(1px);
+    z-index: -1;
+}
+
+.titulo-terror::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4d0000;
+    transform: translateY(25px) scaleY(2.2);
+    opacity: 0.55;
+    filter: blur(2px);
+    z-index: -2;
+}
+
+.titulo-terror:hover {
+    animation: temblor 0.1s infinite;
+    transform: scale(1.06);
+}
+
+@keyframes temblor {
+    0%   { transform: translate(1px, 1px); }
+    20%  { transform: translate(-2px, -1px); }
+    40%  { transform: translate(1px, -2px); }
+    60%  { transform: translate(-1px, 2px); }
+    80%  { transform: translate(2px, 1px); }
+    100% { transform: translate(-1px, -1px); }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    padding: 30px;
+    text-align: center;
+    background: #000;
+    color: #777;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(0,0,0,0.85);
+        padding: 20px;
+        border-radius: 6px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .section h2 {
+        font-size: 30px; /* Tamaño adaptado para móviles */
+    }
+}
+
+
